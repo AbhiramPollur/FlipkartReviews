@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Analysis - Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3498db; /* Blue background color */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 200px;
+        }
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="https://etimg.etb2bimg.com/photo/102797309.cms" alt="Flipkart Logo">
+        </div>
+        <h1>Review Analysis Result for {{ product_name }}</h1>
+        <div>
+            <p>Average Customer Rating: {{ average_sentiment }}</p>
+            <p>Average Sentiment Rating out of 5: {{ rating_out_of_5 }}</p>
+        </div>
+        <div>
+            <h2>Positive Word Cloud</h2>
+            {{ positive_wordcloud|safe }}
+        </div>
+        <div>
+            <h2>Negative Word Cloud</h2>
+            {{ negative_wordcloud|safe }}
+        </div>
+        <div>
+            <h2>Reviews Table</h2>
+            {{ table_data|safe }}
+        </div>
+    </div>
+</body>
+</html>
+
+
