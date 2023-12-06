@@ -7,3 +7,4 @@ seaborn==0.13.0
 Flask==2.2.5
 matplotlib==3.8.0
 urllib3==1.26.16
+requests==2.31.0
