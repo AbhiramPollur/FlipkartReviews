@@ -19,11 +19,12 @@ The sentiment analysis model is trained using a dataset comprising over 5000 rev
 1. Navigate to your desired folder where you want to clone the repository in the terminal.
 2. Copy the repository link and type "git clone" and then paste the repository URL in the terminal.
 3. Download the requirements by typing "pip install -r requirements.txt" in the same folder path where the repository is cloned.
-4. Once the required dependencies are installed, run "python app.py".
-5. Click on the link which directs you to the local web page and you see the home page of the app. 
-6. Paste or upload the Flipkart product review page URL.
-7. Click on the "Analyze" button.
-8. Review the comparison, detailed table, and word clouds for a comprehensive understanding of customer sentiments.
+4. Make sure to download the vader_lexicon package of nltk which is in the Flask app code.
+5. Once the required dependencies are installed, run "python app.py".
+6. Click on the link which directs you to the local web page and you see the home page of the app. 
+7. Paste or upload the Flipkart product review page URL.
+8. Click on the "Analyze" button.
+9. Review the comparison, detailed table, and word clouds for a comprehensive understanding of customer sentiments.
 
 ## Dependencies
 
@@ -42,7 +43,8 @@ The sentiment analysis model is trained using a dataset comprising over 5000 rev
 
 1. Clone the repository.
 2. Install dependencies using 'pip install -r requirements.txt'.
-3. Run the Flask app with 'python app.py'.
+3. Before running the Flask app, make sure to download the nltk 'vader_lexicon' package which is in the code for the Flask app.
+4. Run the Flask app with 'python app.py'.
 
 ## Note
 
