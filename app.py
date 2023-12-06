@@ -13,7 +13,6 @@ nltk.downloader.download('vader_lexicon')
 app = Flask(__name__)
 
 # Load your saved DataFrame
-# Replace 'your_saved_dataframe.csv' with the actual filename
 df = pd.read_csv(r"C:\Users\Abhiram P\Desktop\FlipkartReviews\Iphone14.csv")
 
 # Initialize sentiment analyzer
@@ -57,14 +56,13 @@ def index():
         r = requests.get(url)
         soup = BeautifulSoup(r.content, 'html.parser')
         rows = soup.find_all('div', attrs={'class': 'col _2wzgFH K0kLPL'})
-
+        customer_df = pd.DataFrame(columns=['Product name', 'Rating', 'Summary', 'Review'])
         for row in rows:
             sub_row = row.find_all('div', attrs={'class': 'row'})
             rating = sub_row[0].find('div').text
             summary = sub_row[0].find('p').text
             review = sub_row[1].find_all('div')[1].text
             product_name = soup.find('div', attrs={'class': '_2s4DIt _1CDdy2'})
-            customer_df = pd.DataFrame(columns=['Product name', 'Rating', 'Summary', 'Review'])
             customer_df.append({'Product name': product_name, 'Rating': rating, 'Summary': summary, 'Review': review}, ignore_index=True)
 
 
