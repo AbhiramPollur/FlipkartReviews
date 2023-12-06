@@ -55,7 +55,7 @@ for row in rows:
     rating = sub_row[0].find('div').text
     summary = sub_row[0].find('p').text
     review = sub_row[1].find_all('div')[1].text
-    df_ = df.append({'Rating': rating, 'Summary': summary, 'Review': review}, ignore_index=True)
+    df_ = df_.append({'Rating': rating, 'Summary': summary, 'Review': review}, ignore_index=True)
     df_['Product name']=(product_name_text)
 
 
